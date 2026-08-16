@@ -56,8 +56,7 @@
 .cd-menu-level-1 ul li:first-child {
     margin-left: 210px; /* Platz für Logo */
 }
-
-.cd-menu-level-1 ul li a {
+.cd-menubar .cd-menu-level-1 > ul a.cd-menu-item {
     text-transform: uppercase;
 }
 
