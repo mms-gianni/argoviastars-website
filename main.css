@@ -60,3 +60,66 @@
 .cd-club-name {
     display: none; /* Name wird nicht angezeigt, nur das Logo */
 }
+
+/* ==========================================================
+   News: modernere, serifenlose Typografie + Foto prominenter
+   ========================================================== */
+
+/* Fliesstext in der News-Liste sowie Datum/Teaser auf der
+   Detailseite liefen bisher über "Source Serif Pro" (Serifen) –
+   auf serifenlose Schrift umstellen, wie im Rest der Seite. */
+.cd-tile-h-detail-value,
+.cd-additional-subheading,
+.cd-additional-teaser {
+    font-family: 'News Cycle', sans-serif;
+}
+
+.cd-tile-h-detail-value {
+    line-height: 1.6;
+}
+
+/* Kartenoptik: abgerundete Ecken statt eckigem Rahmen, dezenter
+   Schatten statt Border – wirkt insgesamt moderner. */
+.cd-newslist-tile-h .cd-tile-h-box {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.2s ease;
+}
+
+/* Foto als Aufmacher nach oben holen: unabhängig von der Reihenfolge
+   im HTML wird das Bild über die gesamte Kartenbreite an den Anfang
+   der Karte gelegt (Titel/Datum rutschen entsprechend darunter). */
+.cd-newslist-tile-h .cd-tile-h-box:has(.cd-tile-h-image-col) {
+    position: relative;
+}
+
+.cd-newslist-tile-h .cd-tile-h-box:has(.cd-tile-h-image-col) .cd-tile-h-image-col {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* Platz für das Foto reservieren – die Höhe richtet sich nach dem
+   Seitenverhältnis, das ClubDesk fürs jeweilige Bild verwendet. */
+.cd-newslist-tile-h .cd-tile-h-box:has(.cd-image-wrapper-1) .cd-tile-h-main-area {
+    padding-top: 100%;
+}
+.cd-newslist-tile-h .cd-tile-h-box:has(.cd-image-wrapper-4_3) .cd-tile-h-main-area {
+    padding-top: 75%;
+}
+.cd-newslist-tile-h .cd-tile-h-box:has(.cd-image-wrapper-3_2) .cd-tile-h-main-area {
+    padding-top: 66.66%;
+}
+.cd-newslist-tile-h .cd-tile-h-box:has(.cd-image-wrapper-16_9) .cd-tile-h-main-area {
+    padding-top: 56.25%;
+}
+.cd-newslist-tile-h .cd-tile-h-box:has(.cd-image-wrapper-16_10) .cd-tile-h-main-area {
+    padding-top: 62.5%;
+}
