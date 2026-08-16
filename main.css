@@ -21,7 +21,7 @@
 .cd-club-logo-link {
     position: absolute;
     left: 30px;
-    bottom: -18px; /* Bezug: unterer Rand des grauen Balkens -> kontrolliertes Herausragen */
+    bottom: -110px; /* Bezug: unterer Rand des grauen Balkens -> kontrolliertes Herausragen */
     z-index: 50; /* über grauem/schwarzem Balken, unter der fixierten Scroll-Navigation (30000) */
     background-color: #fff;
     padding: 10px 16px;
