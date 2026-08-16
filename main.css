@@ -81,8 +81,10 @@
 /* Kartenoptik: abgerundete Ecken statt eckigem Rahmen, dezenter
    Schatten statt Border – wirkt insgesamt moderner. */
 .cd-newslist-tile-h .cd-tile-h-box {
+    /*
     border: none;
     border-radius: 12px;
+    */
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
     transition: box-shadow 0.2s ease;
 }
@@ -122,4 +124,9 @@
 }
 .cd-newslist-tile-h .cd-tile-h-box:has(.cd-image-wrapper-16_10) .cd-tile-h-main-area {
     padding-top: 62.5%;
+}
+
+.cd-tile-h-main-heading {
+    font-size: 30px;
+    margin: 5px 0 3px 0;
 }
