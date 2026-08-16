@@ -3,3 +3,49 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Haupt-Logo: oben rechts, auf Höhe der Menüleiste, vergrössert.
+   Ragt bewusst etwas über die Navigation hinaus. */
+.cd-navigation-bar-container {
+    position: relative;
+}
+
+.cd-club-logo-link {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    z-index: 100; /* über der Menüleiste, aber unter der fixierten Scroll-Navigation (30000) */
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+.cd-club-logo {
+    height: 120px; /* Standard: 50px */
+}
+
+/* Login-Link nach links schieben, damit ihn das Logo nicht überdeckt */
+.cd-login-link-desktop {
+    margin-right: 280px;
+}
+
+/* Auf kleinen Bildschirmen gibt es keine Menüleiste (cd-hide-small):
+   Logo wieder normal im Balken einreihen */
+@media (max-width: 992px) {
+    .cd-club-logo-link {
+        position: static;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .cd-club-logo {
+        height: 50px;
+    }
+
+    .cd-login-link-desktop {
+        margin-right: 0;
+    }
+}
