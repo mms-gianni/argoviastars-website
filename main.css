@@ -57,6 +57,10 @@
     margin-left: 210px; /* Platz für Logo */
 }
 
+.cd-menu-level-1 ul li {
+    text-transform: capitalize;
+}
+
 .cd-club-name {
     display: none; /* Name wird nicht angezeigt, nur das Logo */
 }
@@ -130,3 +134,4 @@
     font-size: 30px;
     margin: 5px 0 3px 0;
 }
+
