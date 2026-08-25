@@ -26,7 +26,7 @@
        bleiben und sich so vom zentrierten Content entfernen. Stattdessen
        an die gleiche 1200px-Zentrierung binden: ab 1200px Breite wandert
        das Logo mit dem Content mit, darunter bleibt es bei 30px Abstand. */
-    left: max(30px, calc((100vw - 1200px) / 2 - 120px));
+    left: max(30px, calc((100vw - 1200px) / 2 - 190px));
     bottom: -105px; /* Bezug: unterer Rand des grauen Balkens -> kontrolliertes Herausragen */
     z-index: 50; /* über grauem/schwarzem Balken, unter der fixierten Scroll-Navigation (30000) */
     background-color: #fff;
