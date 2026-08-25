@@ -1,3 +1,17 @@
+/* Dezenter "dirty" Hintergrund: ein paar unregelmässige, diagonale
+   Striche (SVG mit leichtem Grunge-Filter), die nicht bis an den
+   Rand laufen. Läuft über body, damit er beim Scrollen nicht an
+   der Seitenhöhe "endet", sondern als fixer Hintergrund hinter dem
+   eigentlichen (weissen) Content sichtbar bleibt. */
+body {
+    background-color: #ffffff;
+    background-image: url('https://cdn.jsdelivr.net/gh/mms-gianni/argoviastars-website@main/images/bg-lines.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .columns {
     max-width: 1200px;
     margin-left: auto;
