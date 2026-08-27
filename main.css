@@ -168,6 +168,18 @@ body {
    relativ zum vollen Viewport-Rand sitzt, nicht zum 1200px-Content) –
    so bleibt der Abstand zwischen Buttons und Login/Logout beim
    Resizen konstant. */
+
+/* ClubDesk setzt auf jeder .cd-section standardmässig
+   "overflow: hidden" (u.a. zum sauberen Begrenzen von Section-
+   Hintergrundbildern). Sobald .cd-row unten auf position:absolute
+   wechselt, verliert diese Section ihren einzigen Inhalt aus dem
+   Fluss und schrumpft auf 0px Höhe – das overflow:hidden schneidet
+   die Buttons dann komplett weg. Nur für diese eine Header-Section
+   deaktivieren, alle anderen Sections behalten ihr overflow:hidden. */
+.header-wrapper .cd-section {
+    overflow: visible;
+}
+
 .header-wrapper .cd-row {
     position: absolute;
     top: 16px;
