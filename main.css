@@ -40,7 +40,7 @@ body {
        bleiben und sich so vom zentrierten Content entfernen. Stattdessen
        an die gleiche 1200px-Zentrierung binden: ab 1200px Breite wandert
        das Logo mit dem Content mit, darunter bleibt es bei 30px Abstand. */
-    left: max(30px, calc((100vw - 1200px) / 2 - 190px));
+    left: max(30px, calc((100vw - 1200px) / 2 - 100px));
     bottom: -105px; /* Bezug: unterer Rand des grauen Balkens -> kontrolliertes Herausragen */
     z-index: 50; /* über grauem/schwarzem Balken, unter der fixierten Scroll-Navigation (30000) */
     background-color: #fff;
@@ -196,6 +196,7 @@ body {
     gap: 22px;
     width: auto;
     z-index: 40; /* über dem grauen Balken, unter Logo (50) und fixer Scroll-Nav (30000) */
+    right: max(130px, calc((100vw - 1200px) / 2 - 30px));
 }
 
 .header-wrapper .cd-col.m4 {
@@ -244,6 +245,7 @@ body {
         justify-content: center;
         gap: 16px;
         margin: 20px 0 20px 0;
+        font-size: large;
     }
 }
 
