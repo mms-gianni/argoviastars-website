@@ -154,3 +154,79 @@ body {
     margin: 5px 0 3px 0;
 }
 
+/* ==========================================================
+   Quick-Links im Header (Shop / Tickets / MyIce Kalender)
+   ========================================================== */
+
+/* ClubDesk zeigt diese 3 Buttons standardmässig als eigene, volle
+   Zeile ÜBER der Navigation (SHOP / TICKETS / MYICE KALENDER, je
+   ein Drittel der Breite). Per CSS in die graue Navigationsleiste
+   verschieben, links von Login/Logout. .cd-header ist von ClubDesk
+   aus bereits position:relative – die Zeile daraus entfernen wir
+   aus dem Fluss, damit oben keine leere Lücke bleibt. Die Position
+   ist bewusst ein fixer px-Wert (wie der Login-Link selbst auch
+   relativ zum vollen Viewport-Rand sitzt, nicht zum 1200px-Content) –
+   so bleibt der Abstand zwischen Buttons und Login/Logout beim
+   Resizen konstant. */
+.header-wrapper .cd-row {
+    position: absolute;
+    top: 16px;
+    right: 140px;
+    left: auto;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 22px;
+    width: auto;
+    z-index: 40; /* über dem grauen Balken, unter Logo (50) und fixer Scroll-Nav (30000) */
+}
+
+.header-wrapper .cd-col.m4 {
+    flex: none;
+    max-width: none;
+    width: auto;
+}
+
+/* Rahmenlos, rot, etwas kleiner als das Hauptmenü (24px) */
+.header-wrapper a.cd-button-tertiary {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    font-size: 14px;
+    color: #E31622;
+}
+
+.header-wrapper a.cd-button-tertiary:hover {
+    background: none;
+    color: #E31622;
+    text-decoration: underline;
+}
+
+.header-wrapper a.cd-button-tertiary::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+}
+
+#block_1003360_content a.cd-button-tertiary::before { content: "\f07a"; } /* Shop: Warenkorb */
+#block_1003361_content a.cd-button-tertiary::before { content: "\f145"; } /* Tickets */
+#block_1003362_content a.cd-button-tertiary::before { content: "\f073"; } /* MyIce Kalender */
+
+/* Auf kleinen Bildschirmen (keine feste Navigationsleiste, Burger-Menü
+   übernimmt) wieder normal als eigene Zeile oben anzeigen. */
+@media (max-width: 992px) {
+    .header-wrapper .cd-row {
+        position: static;
+        top: auto;
+        right: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
