@@ -180,6 +180,10 @@ body {
     overflow: visible;
 }
 
+.header-wrapper .cd-block-content {
+    padding: 0;
+}
+
 .header-wrapper .cd-row {
     position: absolute;
     top: 16px;
