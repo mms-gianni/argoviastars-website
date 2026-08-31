@@ -215,6 +215,7 @@ body {
     justify-content: center;
     gap: 4px;
     /* border: none; */
+    border-color: #F8F4F4;
     background: linear-gradient(180deg, #DE3742 0%, #B81E27 100%);
     margin-top: -2px;
     padding: 10px 14px;
