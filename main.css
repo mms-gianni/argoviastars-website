@@ -215,10 +215,10 @@ body {
     gap: 4px;
     /* border: none; */
     background: linear-gradient(180deg, #DE3742 0%, #B81E27 100%);
-    margin: 0;
+    margin-top: 15px;
     padding: 10px 14px;
     border-radius: 4px;
-    font-size: 16px; 
+    font-size: 19px; 
     font-weight: 600;
     letter-spacing: 0.2px;
     color: #fff;
@@ -232,7 +232,7 @@ body {
     color: #fff;
     text-decoration: none;
     transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(179, 25, 34, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+   /* box-shadow: 0 6px 14px rgba(179, 25, 34, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);*/
 }
 
 .header-wrapper a.cd-button-tertiary:active {
